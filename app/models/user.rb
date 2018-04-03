@@ -1,5 +1,7 @@
 class User < ApplicationRecord
 	
+	has_many :posts
+	 
 	before_create :create_remember_token
 	before_save { email.downcase! }
 	
